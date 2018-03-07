@@ -149,11 +149,13 @@ for epoch in range(start_epoch+1, args.Nepoch+1):
          
 
     
-import simplejson
+import json
 f_train = open('cifar10_cnn_trainerr_'+ args.method + '.txt', 'w')
-simplejson.dump(train_errs, f_train)
+json.dump(train_errs, f_train)
 f_train.close()
 f_test = open('cifar10_cnn_testerr_'+ args.method + '.txt', 'w')
-simplejson.dump(test_errs, f_test)
+json.dump(test_errs, f_test)
 f_test.close()
+
+
  

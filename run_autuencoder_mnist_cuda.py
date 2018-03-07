@@ -171,11 +171,11 @@ for epoch in range(start_epoch+1, args.Nepoch+1):
     torch.save(state, './checkpoint/autoencoder_mnist_' + args.method)
 
     
-import simplejson
+import json
 f_train = open('mnist_autoencoder_trainloss_'+ args.method + '.txt', 'w')
-simplejson.dump(train_losses, f_train)
+json.dump(train_losses, f_train)
 f_train.close()
 f_test = open('mnist_autoencoder_testloss_'+ args.method + '.txt', 'w')
-simplejson.dump(test_losses, f_test)
+json.dump(test_losses, f_test)
 f_test.close()
  
